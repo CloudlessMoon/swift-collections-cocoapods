@@ -2,5 +2,5 @@ platform :ios, '13.0'
 use_frameworks! :linkage => :static
 
 target 'SwiftCollectionsExample' do
-  pod 'swift-collections', :path => '..'
+  pod 'SuperCollections', :path => '..'
 end
