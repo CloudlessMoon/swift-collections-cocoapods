@@ -6,7 +6,6 @@ Pod::Spec.new do |s|
   s.license = 'MIT'
   s.author = { 'ruanmei' => 'jiasong@ruanmei.com' }
   s.source = { :git => 'https://github.com/apple/swift-collections.git', :tag => s.version.to_s }
-  s.static_framework = true
   s.requires_arc = true
   s.osx.deployment_target = '11.0'
   s.ios.deployment_target = '13.0'
