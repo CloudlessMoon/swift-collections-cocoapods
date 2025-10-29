@@ -2,5 +2,5 @@ platform :ios, '13.0'
 use_frameworks! :linkage => :static
 
 target 'SwiftCollectionsExample' do
-  pod 'SuperCollections', '~> 1.2.1'
+  pod 'SuperCollections', :git => 'https://github.com/CloudlessMoon/swift-collections-cocoapods.git'
 end
