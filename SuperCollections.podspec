@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name = 'SuperCollections'
-  s.version = '1.3.0'
+  s.version = '1.3.0.1'
   s.summary = 'swift-collections'
   s.homepage = 'https://github.com/apple/swift-collections'
   s.license = 'MIT'
   s.author = { 'ruanmei' => 'jiasong@ruanmei.com' }
-  s.source = { :git => 'https://github.com/apple/swift-collections.git', :tag => s.version.to_s }
+  s.source = { :git => 'https://github.com/apple/swift-collections.git', :tag => '1.3.0' }
   s.requires_arc = true
   s.osx.deployment_target = '11.0'
   s.ios.deployment_target = '13.0'
@@ -13,21 +13,18 @@ Pod::Spec.new do |s|
   s.swift_versions = ['5.10']
   s.pod_target_xcconfig = { 
     'SWIFT_ACTIVE_COMPILATION_CONDITIONS' => 'COLLECTIONS_SINGLE_MODULE',
-    'OTHER_SWIFT_FLAGS' => '$(inherited) \
-    -enable-upcoming-feature MemberImportVisibility \
-    -enable-experimental-feature BuiltinModule \
-    -enable-experimental-feature Lifetimes \
-    -enable-experimental-feature InoutLifetimeDependence \
-    -enable-experimental-feature SuppressedAssociatedTypes \
-    -enable-experimental-feature "AvailabilityMacro=SwiftStdlib 5.0: macOS 10.14.4, iOS 12.2, watchOS 5.2, tvOS 12.2" \
-    -enable-experimental-feature "AvailabilityMacro=SwiftStdlib 5.1: macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0" \
-    -enable-experimental-feature "AvailabilityMacro=SwiftStdlib 5.6: macOS 12.3, iOS 15.4, watchOS 8.5, tvOS 15.4" \
-    -enable-experimental-feature "AvailabilityMacro=SwiftStdlib 5.8: macOS 13.3, iOS 16.4, watchOS 9.4, tvOS 16.4" \
-    -enable-experimental-feature "AvailabilityMacro=SwiftStdlib 5.9: macOS 14.0, iOS 17.0, watchOS 10.0, tvOS 17.0" \
-    -enable-experimental-feature "AvailabilityMacro=SwiftStdlib 5.10: macOS 14.4, iOS 17.4, watchOS 10.4, tvOS 17.4, visionOS 1.1" \
-    -enable-experimental-feature "AvailabilityMacro=SwiftStdlib 6.0: macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0" \
-    -enable-experimental-feature "AvailabilityMacro=SwiftStdlib 6.1: macOS 15.4, iOS 18.4, watchOS 11.4, tvOS 18.4, visionOS 2.4" \
-    -enable-experimental-feature "AvailabilityMacro=SwiftStdlib 6.2: macOS 26.0, iOS 26.0, watchOS 26.0, tvOS 26.0, visionOS 26.0"'
+    'OTHER_SWIFT_FLAGS' => [
+      '$(inherited)',
+      '-enable-experimental-feature "AvailabilityMacro=SwiftStdlib 5.0: macOS 10.14.4, iOS 12.2, watchOS 5.2, tvOS 12.2"',
+      '-enable-experimental-feature "AvailabilityMacro=SwiftStdlib 5.1: macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0"',
+      '-enable-experimental-feature "AvailabilityMacro=SwiftStdlib 5.6: macOS 12.3, iOS 15.4, watchOS 8.5, tvOS 15.4"',
+      '-enable-experimental-feature "AvailabilityMacro=SwiftStdlib 5.8: macOS 13.3, iOS 16.4, watchOS 9.4, tvOS 16.4"',
+      '-enable-experimental-feature "AvailabilityMacro=SwiftStdlib 5.9: macOS 14.0, iOS 17.0, watchOS 10.0, tvOS 17.0"',
+      '-enable-experimental-feature "AvailabilityMacro=SwiftStdlib 5.10: macOS 14.4, iOS 17.4, watchOS 10.4, tvOS 17.4, visionOS 1.1"',
+      '-enable-experimental-feature "AvailabilityMacro=SwiftStdlib 6.0: macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0"',
+      '-enable-experimental-feature "AvailabilityMacro=SwiftStdlib 6.1: macOS 15.4, iOS 18.4, watchOS 11.4, tvOS 18.4, visionOS 2.4"',
+      '-enable-experimental-feature "AvailabilityMacro=SwiftStdlib 6.2: macOS 26.0, iOS 26.0, watchOS 26.0, tvOS 26.0, visionOS 26.0"'
+    ].join(' ')
   }
 
   s.source_files = 'Sources/**/*.swift'
