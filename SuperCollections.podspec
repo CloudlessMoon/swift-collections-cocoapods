@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'SuperCollections'
-  s.version = '1.2.1'
+  s.version = '1.3.0'
   s.summary = 'swift-collections'
   s.homepage = 'https://github.com/apple/swift-collections'
   s.license = 'MIT'
