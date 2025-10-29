@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.swift_versions = ['5.10']
   s.pod_target_xcconfig = { 
     'SWIFT_ACTIVE_COMPILATION_CONDITIONS' => 'COLLECTIONS_SINGLE_MODULE',
-    'OTHER_SWIFT_FLAGS' => '\
+    'OTHER_SWIFT_FLAGS' => '$(inherited) \
     -enable-upcoming-feature MemberImportVisibility \
     -enable-experimental-feature BuiltinModule \
     -enable-experimental-feature Lifetimes \
@@ -27,8 +27,7 @@ Pod::Spec.new do |s|
     -enable-experimental-feature "AvailabilityMacro=SwiftStdlib 5.10: macOS 14.4, iOS 17.4, watchOS 10.4, tvOS 17.4, visionOS 1.1" \
     -enable-experimental-feature "AvailabilityMacro=SwiftStdlib 6.0: macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0" \
     -enable-experimental-feature "AvailabilityMacro=SwiftStdlib 6.1: macOS 15.4, iOS 18.4, watchOS 11.4, tvOS 18.4, visionOS 2.4" \
-    -enable-experimental-feature "AvailabilityMacro=SwiftStdlib 6.2: macOS 26.0, iOS 26.0, watchOS 26.0, tvOS 26.0, visionOS 26.0"\
-    '
+    -enable-experimental-feature "AvailabilityMacro=SwiftStdlib 6.2: macOS 26.0, iOS 26.0, watchOS 26.0, tvOS 26.0, visionOS 26.0"'
   }
 
   s.source_files = 'Sources/**/*.swift'
